@@ -1,34 +1,37 @@
-# vue-template
+# Vue 项目模板
 
-## Project setup
-```
-npm install
-```
+## 规范
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### 使用 `npm run commit` 提交代码
 
-### Compiles and minifies for production
-```
+解释：git 提交基于 [angular 的 commit 规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)，提交时会自动进行校验， commit 信息不符合要求将导致提交失败。如遇到特殊情况，才可使用 `git commit` 命令进行提交，但仍然会对 commit 信息进行校验
+
+### lodash 的所有方法都要按需引入，减小包体积
+
+例子：`import cloneDeep from 'lodash/cloneDeep'`
+
+## 相关命令
+
+```sh
+# 启动
+npm run dev
+
+# 打包
 npm run build
-```
 
-### Run your unit tests
-```
+# 单元测试
 npm run test:unit
-```
 
-### Run your end-to-end tests
-```
+# 端到端测试
 npm run test:e2e
-```
 
-### Lints and fixes files
-```
+# 代码格式校验
 npm run lint
+
+# 提交代码
+npm run commit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 自定义配置
+
+[配置文档](https://cli.vuejs.org/config/)
