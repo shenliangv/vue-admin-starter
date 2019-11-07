@@ -1,0 +1,62 @@
+/* Color
+-------------------------- */
+$--color-primary: #1890ff !default;
+
+$--color-white: #FFFFFF !default;
+
+$--color-black: #000000 !default;
+
+$--color-success: #52c41a !default;
+
+$--color-warning: #faad14 !default;
+
+$--color-danger: #f5222d !default;
+
+$--color-info: #909399 !default;
+
+$--color-text-primary: rgba(0, 0, 0, 0.65) !default;
+
+$--color-text-regular: #606266 !default;
+
+$--color-text-secondary: rgba(0, 0, 0, .45) !default;
+// $--color-text-secondary: #909399 !default;
+
+$--color-text-placeholder: #c0c4cc !default;
+
+$--border-color-base: #d9d9d9 !default;
+
+
+/* Disable base
+-------------------------- */
+// $--disabled-fill-base: $--background-color-base !default;
+// $--disabled-color-base: $--color-text-placeholder !default;
+
+$--disabled-border-base: $--border-color-base !default;
+// $--disabled-border-base: $--border-color-light !default;
+
+/* Menu
+--------------------------*/
+$--menu-item-hover-fill: #e6f7ff !default;
+
+/* Table
+-------------------------- */
+$--table-border-color: #e8e8e8 !default;
+$--table-font-color: $--color-text-primary !default;
+$--table-header-font-color: rgba(0, 0, 0, 0.65) !default;
+$--table-row-hover-background-color: #e6f7ff !default;
+$--table-current-row-background-color: #e6f7ff !default;
+$--table-header-background-color: #fafafa !default;
+// $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
+
+
+$title-color: rgba(0, 0, 0, .85) !default;
+
+// 头部高度
+$layout-header-height: 60px;
+
+$layout-main-height: calc(100vh - 60px);
+
+// 侧栏宽度
+$layout-siderbar-width: 256px;
+
+$layout-siderbar-width-collapsed: 64px;

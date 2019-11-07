@@ -1,0 +1,118 @@
+@import "./var";
+@import "./mixins";
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+#body {
+  .el-scrollbar {
+    // &__bar {
+    //   right: 0;
+    // }
+
+    &__thumb {
+      background-color: rgba(144, 147, 153, .3);
+
+      &:hover {
+        background-color: rgba(144, 147, 153, .5);
+      }
+    }
+  }
+
+  .el-submenu {
+
+    &__title:hover,
+    &.is-active .el-submenu__title {
+      color: $--color-primary;
+      background-color: #fff;
+
+      i {
+        color: $--color-primary;
+      }
+    }
+
+    &__title {
+      height: 40px;
+      margin: 4px 0;
+      line-height: 40px;
+    }
+
+    &__icon-arrow {
+      font-weight: bold;
+      color: #666;
+    }
+  }
+
+  .el-menu-item {
+    height: 40px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    line-height: 40px;
+    @include border-right($--color-primary, 3px);
+
+    &:after {
+      transform: scaleY(.0001);
+      opacity: 0;
+      transition: transform .15s cubic-bezier(.215, .61, .355, 1), opacity .15s cubic-bezier(.215, .61, .355, 1);
+    }
+
+    &:hover {
+      color: $--color-primary;
+      background-color: #fff;
+
+      i {
+        color: $--color-primary;
+      }
+    }
+
+    &:focus,
+    &.is-active {
+      color: $--color-primary;
+      background-color: $--menu-item-hover-fill;
+
+      &:after {
+        transform: scaleY(1);
+        opacity: 1;
+        transition: transform .15s cubic-bezier(.645, .045, .355, 1), opacity .15s cubic-bezier(.645, .045, .355, 1);
+      }
+    }
+  }
+
+  .el-form-item {
+    margin-bottom: 24px;
+
+    &.is-error {
+      .el-input__inner {
+        border-color: #ff4d4f;
+        // border-right-width: 1px !important;
+        box-shadow: 0 0 0 2px rgba(245, 34, 45, .2);
+      }
+    }
+  }
+
+  .el-input__inner {
+    &:focus {
+      border-color: #40a9ff;
+      // border-right-width: 1px !important;
+      box-shadow: 0 0 0 2px rgba(24, 144, 255, .2);
+    }
+  }
+
+  .el-autocomplete-suggestion {
+    &.el-popper {
+      margin-top: 4px;
+    }
+
+    .popper__arrow {
+      display: none;
+    }
+  }
+
+  .el-table {
+    th {
+      font-weight: normal;
+    }
+  }
+}
