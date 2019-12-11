@@ -60,7 +60,7 @@
               />
               <el-button
                 @click="onFetchCode"
-                :disabled="codeBtnText !== CODE_BTN_TEXT"
+                :disabled="!canFetchCode"
                 size="default"
               >
                 {{ codeBtnText }}
@@ -107,7 +107,7 @@ enum LoginTypes {
   MOBILE = 'MOBILE'
 }
 
-const CODE_BTN_TEXT = '获取验证码'
+const CODE_BTN_TEXT_DEFAULT = '获取验证码'
 
 export default Vue.extend({
   components: { TheFooter },
@@ -116,8 +116,7 @@ export default Vue.extend({
     return {
       rememberMe: false,
       LoginTypes,
-      CODE_BTN_TEXT,
-      codeBtnText: CODE_BTN_TEXT,
+      codeBtnText: CODE_BTN_TEXT_DEFAULT,
       loginType: LoginTypes.ACCOUNT,
       formAccount: {
         username: '',
@@ -143,6 +142,10 @@ export default Vue.extend({
   },
 
   computed: {
+    canFetchCode(): boolean {
+      return this.codeBtnText === CODE_BTN_TEXT_DEFAULT
+    },
+
     formData(): PlainObject {
       switch (this.loginType) {
         case LoginTypes.ACCOUNT:
@@ -201,6 +204,10 @@ export default Vue.extend({
     },
 
     onFetchCode() {
+      if (!this.canFetchCode) {
+        return
+      }
+
       const formMobile = this.$refs.formMobile as ElForm
 
       formMobile.validateField('mobile', async errorMessage => {
@@ -214,11 +221,10 @@ export default Vue.extend({
     },
 
     countdown(t: number) {
-      console.log('countdown', t)
       if (t > 0) {
         this.codeBtnText = `${Math.floor(t / 1000)}s`
       } else {
-        this.codeBtnText = CODE_BTN_TEXT
+        this.codeBtnText = CODE_BTN_TEXT_DEFAULT
       }
     },
 
