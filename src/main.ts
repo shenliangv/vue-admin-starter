@@ -11,12 +11,12 @@ import store from './store'
 import 'nprogress/nprogress.css'
 import './assets/styles/index.scss'
 
-import app from './app.vue'
+import App from './App.vue'
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
-  render: h => h(app)
+  render: h => h(App)
 }).$mount('#app')

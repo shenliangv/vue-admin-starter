@@ -30,13 +30,17 @@ NProgress.configure({ showSpinner: false })
 // TODO 登录校验
 router.beforeEach((to, from, next) => {
   NProgress.start()
-  console.log('login validation', to)
+
+  console.log('login validation', hasLogin(), to)
   if (to.meta && to.meta.noCheckLogin) {
     return next()
   }
 
-  console.log('hasLogin()', hasLogin(), routesPath.USER_LOGIN)
-  hasLogin() ? next() : next(routesPath.USER_LOGIN)
+  if (hasLogin()) {
+    next()
+  } else {
+    next({ path: routesPath.USER_LOGIN, query: { redirect: to.fullPath } })
+  }
 })
 
 // TODO 路由权限校验

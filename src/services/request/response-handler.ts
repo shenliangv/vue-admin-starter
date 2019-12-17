@@ -1,5 +1,4 @@
 import { Message } from 'element-ui'
-import store from '@/store'
 import router from '@/router'
 import routesPath from '@/router/routes-path'
 
@@ -33,7 +32,6 @@ const errorHandlers: HandlerMap = {
   },
   401: res => {
     tip(res.data.message)
-    store.dispatch('user/logout')
     router.push({
       path: routesPath.USER_LOGIN,
       query: { redirect: router.currentRoute.fullPath }
