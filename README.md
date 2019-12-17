@@ -1,18 +1,21 @@
-# Vue 单页应用模板
+# vue-admin-starter
 
-<!-- TOC -->
+## 简介
 
-- [目录结构](#目录结构)
-- [相关命令](#相关命令)
-- [编码规范](#编码规范)
-- [Git 规范](#git-规范)
-- [参考](#参考)
+[vue-admin-starter](https://shenliangv.github.io/vue-admin-starter) 是一个中后台应用的项目骨架，基于 [Vue](https://github.com/vuejs/vue)、[element-ui](https://github.com/ElemeFE/element)、[TypeScript](https://github.com/microsoft/TypeScript) 实现。致力于提炼典型模板、业务组件以及前端常用的可复用代码，帮助开发人员快速搭建中后台产品原型。
 
-<!-- /TOC -->
+## 目录结构
 
-### 目录结构
+```sh
+# TODO
+```
 
-### 相关命令
+## 文档
+
+- [编码规范](./docs/code-style-guide/index.md)
+- [Git 规范](./docs/git.md)
+
+## 相关命令
 
 ```sh
 # 提交代码
@@ -43,20 +46,6 @@ npm run test:e2e
 npm run lint
 ```
 
-### 编码规范
-
-- [HTML](./docs/code-style-guide/html.md)
-- [CSS](./docs/code-style-guide/css.md)
-- [JavaScript](./docs/code-style-guide/javascript.md)
-- [TypeScript](./docs/code-style-guide/typescript.md)
-- [Vue](./docs/code-style-guide/vue.md)
-
-### Git 规范
-
-- 使用 `npm run commit` 命令提交代码，基于 [angular 规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)，提交时会自动进行校验， commit 信息不符合要求将导致提交失败
-- master 分支、dev 分支为保护分支，只能通过 pull request 更新代码，开发环境、测试环境发布使用 dev 分支代码构建，生产环境使用 master 分支代码构建
-- 每次迭代上线之后，在最后一个 `commit` 上添加 `tag` 作为版本号
-
-### 参考
+## 参考
 
 样式和布局参考了 [Ant Design Pro](https://preview.pro.ant.design/dashboard/analysis)

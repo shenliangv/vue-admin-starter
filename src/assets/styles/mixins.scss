@@ -1,8 +1,15 @@
+// 隐藏单行本文
+@mixin hide-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+
 // 单行文本溢出隐藏
 @mixin text-ellipsis {
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // 扩展点击区域  $x: 水平方向扩展距离， $y：竖直方向扩展距离

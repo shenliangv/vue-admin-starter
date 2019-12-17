@@ -1,7 +1,5 @@
 import { AxiosRequestConfig } from 'axios'
 
-console.log('process.env', process.env)
-
 type BuildEnv = 'dev' | 'staging' | 'prod'
 
 interface RequestConfig {
@@ -17,7 +15,7 @@ const requestConfigsPublic: RequestConfig = {
     baseURL: 'http://192.168.0.230:8081'
   },
   staging: {
-    baseURL: ''
+    baseURL: 'http://qa.api.auth.prisonpublic.com'
   },
   prod: {
     baseURL: ''
@@ -29,7 +27,7 @@ const requestConfigsYwt: RequestConfig = {
     baseURL: 'http://47.107.245.151:8021/ywgk'
   },
   staging: {
-    baseURL: ''
+    baseURL: 'http://47.107.245.151:8021/ywgk'
   },
   prod: {
     baseURL: ''

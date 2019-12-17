@@ -111,6 +111,9 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
   }
 
   .el-table {
+    border: 1px solid $--table-border-color;
+    border-bottom: none;
+
     th {
       font-weight: normal;
     }

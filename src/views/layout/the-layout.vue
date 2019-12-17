@@ -8,8 +8,11 @@
       <el-container direction="vertical" class="main-container">
         <el-scrollbar>
           <el-main>
-            <router-view />
+            <keep-alive :include="$store.state.global.componentsKeepAlive">
+              <router-view />
+            </keep-alive>
           </el-main>
+
           <the-footer />
         </el-scrollbar>
       </el-container>

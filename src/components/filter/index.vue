@@ -48,7 +48,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { filterObject, hasValue } from '@/utils/helper'
+import { filterObject, hasValue } from '@/utils/lang'
 
 import { PlainObject } from '@/types/base'
 import { FilterItem } from '@/types/components'

@@ -31,6 +31,8 @@ import { rowCallbackParams } from 'element-ui/types/table'
 import { CustomTableColumn } from '@/types/components'
 
 export default Vue.extend({
+  name: 'DynamicTable',
+
   components: { ComTable },
 
   data() {

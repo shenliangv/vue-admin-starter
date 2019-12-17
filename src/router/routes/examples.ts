@@ -20,7 +20,11 @@ const routes: CustomRouteConfig[] = [
       {
         path: '/examples/components/breadcrumb',
         component: _import('examples/components/breadcrumb'),
-        meta: { title: '面包屑', isMenu: true }
+        meta: {
+          title: '面包屑',
+          isMenu: true,
+          componentsUnRemoveKeepAlive: ['DynamicTable']
+        }
       },
       {
         path: '/examples/components/filter',
@@ -30,7 +34,11 @@ const routes: CustomRouteConfig[] = [
       {
         path: '/examples/components/table',
         component: _import('examples/components/table'),
-        meta: { title: '动态表格', isMenu: true }
+        meta: {
+          title: '动态表格',
+          isMenu: true,
+          componentsToKeepAlive: ['DynamicTable']
+        }
       },
       {
         path: '/examples/components/rich-text',

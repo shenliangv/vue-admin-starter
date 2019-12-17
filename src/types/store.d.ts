@@ -7,6 +7,7 @@ export interface StateRoot {
 export interface StateGlobal {
   menuCollapse: boolean
   authorities: string | string[]
+  componentsKeepAlive: string[]
 }
 
 export interface StateUser {

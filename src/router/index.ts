@@ -2,14 +2,16 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import NProgress from 'nprogress'
 
+import store from '@/store'
 import routes from './routes'
 import routesPath from './routes-path'
+import { unique } from '@/utils/lang'
 import { hasLogin } from '@/utils/auth'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes,
   scrollBehavior(to, from, savedPosition) {
@@ -40,6 +42,33 @@ router.beforeEach((to, from, next) => {
 // TODO 路由权限校验
 router.beforeEach((to, from, next) => {
   console.log('auth validation', to)
+  next()
+})
+
+// 动态缓存组件
+router.beforeEach((to, from, next) => {
+  if (to.meta.componentsUnRemoveKeepAlive) {
+    const components = store.state.global.componentsKeepAlive.filter(comp => {
+      return to.meta.componentsUnRemoveKeepAlive.includes(comp)
+    })
+
+    store.dispatch('global/setComponentsKeepAlive', unique(components))
+  } else {
+    // 默认移除所有动态缓存的组件
+    store.dispatch('global/setComponentsKeepAlive', [])
+  }
+
+  // 缓存组件
+  if (to.meta.componentsToKeepAlive) {
+    store.dispatch(
+      'global/setComponentsKeepAlive',
+      unique([
+        ...to.meta.componentsToKeepAlive,
+        ...store.state.global.componentsKeepAlive
+      ])
+    )
+  }
+
   next()
 })
 

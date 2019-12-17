@@ -1,4 +1,4 @@
-import { encrypt } from '@/utils/helper'
+import { encrypt } from '@/utils/crypto'
 
 export enum ErrorType {
   ERROR_403 = 'ERROR_403',

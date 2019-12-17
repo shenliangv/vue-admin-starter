@@ -15,10 +15,8 @@
 #### 【强制】遵循 [BEM](http://getbem.com/) 命名规范，可参考 [element-ui](https://element.eleme.cn/#/zh-CN/component/installation) 的 `class` 命名
 
 - `class` 使用小写字母、`id` 采用驼峰式命名
-- `scss` 中的变量、函数、混合、`placeholder` 采用驼峰式命名
 
 ```scss
-// BEM
 .block {}
 
 .block--modifier {}
@@ -26,34 +24,6 @@
 .block__element {}
 
 .block__element--modifier {}
-
-// class
-.element-content {
-  // ...
-}
-
-// id
-#myDialog {
-  // ...
-}
-
-// 变量
-$colorBlack: #000;
-
-// 函数
-@function pxToRem($px) {
-  // ...
-}
-
-// 混合
-@mixin centerBlock {
-  // ...
-}
-
-// placeholder
-%myDialog {
-  // ...
-}
 ```
 
 ## 建议

@@ -1,5 +1,8 @@
 <template>
-  <el-submenu v-if="menu.children" :index="menu.path">
+  <el-submenu
+    v-if="menu.children && menu.children.length > 0"
+    :index="menu.path"
+  >
     <template v-slot:title>
       <i :class="menu.meta.icon || 'el-icon-document'"></i>
       <span>{{ menu.meta.title }}</span>
