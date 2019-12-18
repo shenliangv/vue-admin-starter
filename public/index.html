@@ -7,6 +7,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <title>Vue 中后台应用模板</title>
+
+  <script src="/static/js/bowser@1.9.4.min.js"></script>
+  <script>
+    if (bowser.name === 'Internet Explorer') {
+      location.href = '/static/browser.html'
+    }
+  </script>
 </head>
 
 <body id="body">
