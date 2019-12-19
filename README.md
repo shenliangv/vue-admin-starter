@@ -1,8 +1,10 @@
-# vue-admin-starter
+# vue-admin-starter（开发中...）
 
 ## 简介
 
-[vue-admin-starter](https://shenliangv.github.io/vue-admin-starter) 是一个中后台应用的项目骨架，基于 [Vue](https://github.com/vuejs/vue)、[element-ui](https://github.com/ElemeFE/element)、[TypeScript](https://github.com/microsoft/TypeScript) 实现。致力于提炼典型模板、业务组件以及前端常用的可复用代码，帮助开发人员快速搭建中后台产品原型。
+[vue-admin-starter](https://shenliangv.github.io/vue-admin-starter) 基于 [Vue](https://github.com/vuejs/vue)、[element-ui](https://github.com/ElemeFE/element)、[TypeScript](https://github.com/microsoft/TypeScript) 实现。致力于提炼典型模板、业务组件以及前端常用的可复用代码，帮助开发人员快速搭建中后台产品原型。
+
+预览地址：<https://shenliangv.github.io/vue-admin-starter>
 
 ## 目录结构
 

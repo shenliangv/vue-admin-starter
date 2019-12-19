@@ -36,7 +36,7 @@
       >
         <div>
           <el-avatar
-            src="https://avatars2.githubusercontent.com/u/43558998?s=460&v=4"
+            src="https://s.gravatar.com/avatar/2704278e1d1b9836f186f05909dfa386?s=50&d=retro"
             shape="square"
             size="medium"
           >

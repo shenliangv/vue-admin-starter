@@ -12,11 +12,11 @@ const BUILD_ENV: BuildEnv = process.env.VUE_APP_BUILD_ENV.toLowerCase()
 
 const requestConfigsPublic: RequestConfig = {
   dev: {
-    baseURL: 'http://qa.api.auth.prisonpublic.com'
+    baseURL: ''
   },
 
   staging: {
-    baseURL: 'http://qa.api.auth.prisonpublic.com'
+    baseURL: ''
   },
 
   prod: {
@@ -26,11 +26,11 @@ const requestConfigsPublic: RequestConfig = {
 
 const requestConfigsYwt: RequestConfig = {
   dev: {
-    baseURL: 'http://47.107.245.151:8021/ywgk'
+    baseURL: ''
   },
 
   staging: {
-    baseURL: 'http://47.107.245.151:8021/ywgk'
+    baseURL: ''
   },
 
   prod: {

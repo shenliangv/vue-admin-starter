@@ -120,8 +120,8 @@ export default Vue.extend({
       codeBtnText: CODE_BTN_TEXT_DEFAULT,
       loginType: LoginTypes.ACCOUNT,
       formAccount: {
-        username: '',
-        password: '',
+        username: 'admin',
+        password: '123456',
         grant_type: 'password',
         mode: 'account_password'
       },
