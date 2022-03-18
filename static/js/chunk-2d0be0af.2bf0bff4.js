@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0be0af"],{"2f27":function(e,n,t){"use strict";t.r(n);var s=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",{staticClass:"user-center"},[e._v(" 个人中心 ")])},u=[],a=t("2b0e"),c=a["default"].extend({}),l=c,r=t("2877"),i=Object(r["a"])(l,s,u,!1,null,null,null);n["default"]=i.exports}}]);

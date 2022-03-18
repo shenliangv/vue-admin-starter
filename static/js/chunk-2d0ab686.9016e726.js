@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0ab686"],{"14c0":function(e,t,n){"use strict";n.r(t);var s=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"user-setting"},[e._v(" 个人设置 ")])},u=[],a=n("2b0e"),c=a["default"].extend({}),l=c,i=n("2877"),r=Object(i["a"])(l,s,u,!1,null,null,null);t["default"]=r.exports}}]);
